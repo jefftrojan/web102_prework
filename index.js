@@ -180,13 +180,20 @@ allBtn.addEventListener("click", showAllGames);
 // grab the description container
 const descriptionContainer = document.getElementById("description-container");
 
+
 // use filter or reduce to count the number of unfunded games
+const numUnfunded = GAMES_JSON.filter(game => game.pledged < game.goal).length;
 
 
 // create a string that explains the number of unfunded games using the ternary operator
-
+const unfundedString = numUnfunded === 1 ? "is 1 game" : `are ${numUnfunded} games`;
 
 // create a new DOM element containing the template string and append it to the description container
+const unfundedGames = document.createElement("p");
+unfundedGames.innerHTML = `
+    There ${unfundedString} that have not yet met their funding goal.
+`;
+descriptionContainer.appendChild(unfundedGames);
 
 /************************************************************************************
  * Challenge 7: Select & display the top 2 games
@@ -201,7 +208,25 @@ const sortedGames =  GAMES_JSON.sort( (item1, item2) => {
 });
 
 // use destructuring and the spread operator to grab the first and second games
+const [topGame, runnerUp] = sortedGames;
+
 
 // create a new element to hold the name of the top pledge game, then append it to the correct element
+const topGameName = document.createElement("h3");
+topGameName.innerHTML = topGame.name;
+firstGameContainer.appendChild(topGameName);
 
 // do the same for the runner up item
+const runnerUpName = document.createElement("h3");
+runnerUpName.innerHTML = runnerUp.name;
+secondGameContainer.appendChild(runnerUpName);
+
+// create a new element to hold the description of the top pledge game, then append it to the correct element
+const topGameDescription = document.createElement("p");
+topGameDescription.innerHTML = topGame.description;
+firstGameContainer.appendChild(topGameDescription);
+
+// do the same for the runner up item
+const runnerUpDescription = document.createElement("p");
+runnerUpDescription.innerHTML = runnerUp.description;
+secondGameContainer.appendChild(runnerUpDescription);

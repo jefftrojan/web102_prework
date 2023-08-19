@@ -34,7 +34,11 @@ GIF created with ...
 
 ## Notes
 
-Challenges faced - 
+### Concepts Learnt - 
+ternary operators, template literals, reduce, filters, destructuring and spread
+
+
+### Challenges faced - 
 Had difficulty displaying the images on their respective cards, I initially thought it was an issue from the json but I figured that I had a spelling error in my image tag
 ## License
 
