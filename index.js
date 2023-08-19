@@ -41,10 +41,9 @@ function addGamesToPage(games) {
             // about each game
             // TIP: if your images are not displaying, make sure there is space
             // between the end of the src attribute and the end of the tag ("/>")
-            game.classList.add("game-img")
 
             game.innerHTML = `
-                <img src="${games[i].image}" />
+                <img class="game-img" src="${games[i].img}" />
                 <h3>${games[i].name}</h3>
                 <p>${games[i].description}</p>
                 <p>Goal: $${games[i].goal.toLocaleString()}</p>
