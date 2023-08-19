@@ -35,6 +35,7 @@ GIF created with ...
 ## Notes
 
 Challenges faced - 
+Had difficulty displaying the images on their respective cards, I initially thought it was an issue from the json but I figured that I had a spelling error in my image tag
 ## License
 
     Copyright [2025] [Jeffrey Dauda]
