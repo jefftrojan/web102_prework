@@ -53,8 +53,10 @@ body {
 .game-img {
     width: 100%;
     border-radius: 5px;
-    box-shadow: 0 0 10px #FFFFFF;
+    box-shadow: 0 0 10px hsl(0, 0%, 100%);
 }
+
+
 
 .game-card {
     background-color: #FFFFFF;
@@ -68,6 +70,8 @@ body {
 .game-card:hover {
     cursor: pointer;
     box-shadow: 0 0 30px lightblue;
+    transform:scale(1.2);
+
 }
 
 #button-container {
@@ -80,4 +84,16 @@ button {
     padding: 1%;
     margin: 1%;
     border-radius: 7px;
+    cursor: pointer;
+
+}
+
+button:hover {
+    box-shadow: 0 0 30px lightblue;
+    cursor: pointer;
+}
+
+button:active {
+    transform: translateY(4px);
+    color: #758190;
 }
